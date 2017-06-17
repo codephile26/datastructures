@@ -1,0 +1,3 @@
+[submodule "arrays"]
+	path = arrays
+	url = https://github.com/codephile26/datastructures
