@@ -18,4 +18,9 @@ public class TestBalancedParentheses {
 	public void testBalancedParenthesesNegativeMissingBracket(){
 		assertEquals(false,BalancedParentheses.checkForBalancedParentheses("{[()()]"));
 	}
+
+	@Test
+	public void testBalancedParenthesesPostiveWithAlphanumeric(){
+		assertEquals(false,BalancedParentheses.checkForBalancedParentheses("{[(A+B)(C+D)]"));
+	}
 }
