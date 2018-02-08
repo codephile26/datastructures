@@ -61,4 +61,24 @@ public class Graph {
 		return -1;
 	}
 	
+	public void bfs(){
+		Queue<Integer> q = new LinkedList<Integer>();
+		vertexList[0].setVisited(true);
+		displayVertex(0);
+		q.offer(0);
+		int v2;
+		while (!q.isEmpty()){
+			int v1 = q.remove();
+			while ((v2 = getAdjUnvisitedVertex(v1)) != -1){
+				vertexList[v2].setVisited(true);
+				displayVertex(v2);
+				q.offer(v2);
+			}
+		}
+		
+		for (int j = 0; j < vertexCount; j++){
+			vertexList[j].setVisited(false);
+		}
+		
+	}
 }
